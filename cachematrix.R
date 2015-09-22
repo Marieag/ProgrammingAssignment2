@@ -11,8 +11,8 @@ makeCacheMatrix <- function(x = matrix()) {	##first we define the function.
 	setmatrix <-function(input) {
 
 		x <<- input					##here we create a matrix based on an input. 
-								##This is stored in the global environment	
-		inverted <<- NULL				##the inverted matrix is also stored in the global environment. 
+								##This is stored in setmatrix's parent environment.	
+		inverted <<- NULL				##the inverted matrix is stored here as well. 
 		}
 
 	getmatrix <- function() x			##returns the value of the matrix 
